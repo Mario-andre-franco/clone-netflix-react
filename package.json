@@ -1,7 +1,7 @@
 {
   "name": "clonenetflix",
   "version": "0.1.0",
-  "homepage": "github-page/",
+  "homepage": "https://mario-andre-franco.github.io/clone-netflix-react/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
