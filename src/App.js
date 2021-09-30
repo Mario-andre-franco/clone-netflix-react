@@ -8,7 +8,7 @@ import Header from './components/Header';
 const InicioApp = () => {
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState(null);
-  const [blackHeader, setBlackHeader] = useState(false);
+  const [blackHeader, setBlackHeader] = useState(true);
 
   useEffect(() => {
     const loadAll = async () => {
@@ -29,14 +29,14 @@ const InicioApp = () => {
   }, []);
 
   useEffect(() => {
-    const scrolListenet = () => {};
-    if (window.scrollY > 10) {
-      setBlackHeader(true);
-    } else {
-      setBlackHeader(false);
-    }
+    const scrolListenet = () => {
+      if (window.scrollY > 10) {
+        setBlackHeader(true);
+      } else {
+        setBlackHeader(false);
+      }
+    };
     window.addEventListener('scroll', scrolListenet);
-
     return () => {
       window.removeEventListener('scroll', scrolListenet);
     };
