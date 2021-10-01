@@ -59,6 +59,15 @@ const InicioApp = () => {
         </span>{' '}
         por Mariola
       </footer>
+
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img
+            alt="loading"
+            src="https://media.filmelier.com/noticias/br/2020/03/Netflix_LoadTime.gif"
+          ></img>
+        </div>
+      )}
     </div>
   );
 };
